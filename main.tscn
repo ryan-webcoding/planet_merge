@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7vrfhdxvh0mf"]
+
+[ext_resource type="PackedScene" uid="uid://c5ijaop44x4dd" path="res://planets/sun/sun.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://yfxyphr4qr5q" path="res://component/planet_spawner/planet_spawner.tscn" id="2_h2yge"]
+
+[node name="main" type="Node"]
+
+[node name="sun" parent="." instance=ExtResource("2_0xm2m")]
+position = Vector2(823, 319)
+
+[node name="planet_spawner" parent="." instance=ExtResource("2_h2yge")]
+position = Vector2(204, 317)
