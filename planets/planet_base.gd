@@ -24,9 +24,15 @@ func _input(event: InputEvent) -> void:
 		if is_dragging:
 			var drag_end_position = event.position
 			var drag_vector = drag_end_position - drag_start_position
-			print("Drag vector: ", drag_vector)
 			apply_impulse(-drag_vector, Vector2.ZERO)
 			emit_signal("launched")
 			is_dragging = false
 			has_been_launched = true
 			gravity_scale = 1
+
+
+func disable_dragging():
+	is_dragging = false
+	has_been_launched = true
+	gravity_scale = 1
+	set_process_input(false)
