@@ -27,10 +27,10 @@ func _on_body_entered(body: Node) -> void:
 			var mars_scene = preload("res://planets/mars/mars.tscn")
 			var mars_instance = mars_scene.instantiate()
 			mars_instance.position = midpoint
-
+			
+			get_tree().root.get_node("main").add_child(mars_instance)
+			
 			if mars_instance.has_method("disable_dragging"):
 				mars_instance.disable_dragging()
-
-			get_tree().current_scene.add_child(mars_instance)
-
-	
+			
+			

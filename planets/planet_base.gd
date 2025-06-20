@@ -35,4 +35,5 @@ func disable_dragging():
 	is_dragging = false
 	has_been_launched = true
 	gravity_scale = 1
+	print(gravity_scale)
 	set_process_input(false)

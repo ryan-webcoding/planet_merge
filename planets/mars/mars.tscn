@@ -9,6 +9,8 @@ radius = 25.0
 [node name="mars" type="RigidBody2D"]
 input_pickable = true
 mass = 2.0
+contact_monitor = true
+max_contacts_reported = 4
 script = ExtResource("1_b0hb1")
 metadata/_edit_group_ = true
 

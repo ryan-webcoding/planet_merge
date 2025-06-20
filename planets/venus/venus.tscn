@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://btrtg5w6rh42"]
+
+[ext_resource type="Texture2D" uid="uid://cve3wy6o05aa0" path="res://img/planets_pixel/venus.png" id="1_ymni0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j0sdt"]
+radius = 33.0
+
+[node name="venus" type="RigidBody2D"]
+input_pickable = true
+mass = 3.0
+contact_monitor = true
+max_contacts_reported = 4
+
+[node name="venus_sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_ymni0")
+offset = Vector2(-1.3, -1.3)
+
+[node name="venus_collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_j0sdt")
+
+[connection signal="input_event" from="." to="." method="_on_input_mouseclicking"]
