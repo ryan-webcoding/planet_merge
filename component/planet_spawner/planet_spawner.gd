@@ -3,6 +3,8 @@ extends Marker2D
 var planet_scenes := [
 	preload("res://planets/mercury/mercury.tscn"),
 	preload("res://planets/mars/mars.tscn"),
+	preload("res://planets/venus/venus.tscn"),
+	preload("res://planets/earth/earth.tscn"),
 ]
 
 var current_planet: Node = null

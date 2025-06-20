@@ -8,6 +8,7 @@ radius = 16.0
 
 [node name="mercury" type="RigidBody2D"]
 input_pickable = true
+mass = 2.0
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_1j4fw")

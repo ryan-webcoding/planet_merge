@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://duk5teg2m8scv"]
+
+[ext_resource type="Texture2D" uid="uid://jhkf6t5unf5j" path="res://img/planets_pixel/jupiter.png" id="1_pbvus"]
+[ext_resource type="Script" uid="uid://806i0s6bd8t7" path="res://planets/jupiter/jupiter.gd" id="1_undom"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_undom"]
+radius = 74.1687
+
+[node name="jupiter" type="RigidBody2D"]
+input_pickable = true
+mass = 2.0
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_undom")
+
+[node name="jupiter_sprite" type="Sprite2D" parent="."]
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("1_pbvus")
+offset = Vector2(-1.4, -1.4)
+
+[node name="jupiter_collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_undom")

@@ -6,7 +6,7 @@
 radius = 81.0555
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_67uk3"]
-radius = 907.035
+radius = 1785.01
 
 [node name="sun" type="StaticBody2D"]
 

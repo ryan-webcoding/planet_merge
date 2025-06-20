@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlojgxujvitqs"]
+
+[ext_resource type="Script" uid="uid://n75a5wl8mpui" path="res://planets/saturn/saturn.gd" id="1_6gutb"]
+[ext_resource type="Texture2D" uid="uid://cslipthu087t5" path="res://img/planets_pixel/saturn.png" id="1_7rkwa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6gutb"]
+radius = 55.0818
+
+[node name="saturn" type="RigidBody2D"]
+input_pickable = true
+mass = 2.0
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_6gutb")
+
+[node name="saturn_sprite" type="Sprite2D" parent="."]
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_7rkwa")
+offset = Vector2(0, 1.6)
+
+[node name="saturn_collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6gutb")

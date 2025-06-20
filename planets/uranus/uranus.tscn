@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://w1nppq1ht1wf"]
+
+[ext_resource type="Texture2D" uid="uid://bxllbkeh35lj6" path="res://img/planets_pixel/uranus.png" id="1_cfysw"]
+[ext_resource type="Script" uid="uid://cu4vewacagp7m" path="res://planets/uranus/uranus.gd" id="1_two67"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_two67"]
+radius = 57.0789
+
+[node name="uranus" type="RigidBody2D"]
+input_pickable = true
+mass = 2.0
+contact_monitor = true
+max_contacts_reported = 4
+script = ExtResource("1_two67")
+
+[node name="uranus_sprite" type="Sprite2D" parent="."]
+position = Vector2(-1.8, -1.8)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_cfysw")
+
+[node name="uranus_collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_two67")
