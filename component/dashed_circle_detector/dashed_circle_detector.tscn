@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://crgqi05ea6bnh"]
 
 [ext_resource type="Script" uid="uid://bc2wc638y7pej" path="res://component/dashed_circle_detector/dashed_circle_detector.gd" id="1_0ooh3"]
-[ext_resource type="Texture2D" uid="uid://5thtbswjivsg" path="res://img/dashed_circle/dashed_circle.png" id="1_wnk7x"]
+[ext_resource type="Texture2D" uid="uid://5thtbswjivsg" path="res://img/component_img/dashed_circle/dashed_circle.png" id="1_wnk7x"]
 
 [sub_resource type="Animation" id="Animation_0ooh3"]
 resource_name = "normal"
@@ -61,6 +61,5 @@ libraries = {
 }
 
 [node name="dashed_circle_collision" type="CollisionPolygon2D" parent="."]
-visible = false
 light_mask = 0
 polygon = PackedVector2Array(257, -269, 333, -156, 370, -28, 354, 99, 292, 228, 182, 317, 63, 363, -64, 359, -187, 311, -290, 223, -353, 110, -369, -27, -331, -164, -256, -276, -129, -351, 6, -375, 152, -345, 249, -271, 273, -294, 161, -371, 6, -406, -145, -378, -275, -296, -359, -179, -397, -32, -381, 116, -317, 245, -204, 341, -69, 389, 69, 391, 196, 345, 312, 248, 385, 108, 399, -31, 359, -173, 279, -290)

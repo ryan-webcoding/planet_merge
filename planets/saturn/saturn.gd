@@ -32,5 +32,5 @@ func _on_body_entered(body: Node) -> void:
 			
 			if jupiter_instance.has_method("disable_dragging"):
 				jupiter_instance.disable_dragging()
-			
+			GameManager.add_score(10)
 			

@@ -13,7 +13,7 @@ contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_6gutb")
 
-[node name="saturn_sprite" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(1.6, 1.6)
 texture = ExtResource("1_7rkwa")
 offset = Vector2(0, 1.6)

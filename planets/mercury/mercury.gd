@@ -32,5 +32,7 @@ func _on_body_entered(body: Node) -> void:
 			
 			if mars_instance.has_method("disable_dragging"):
 				mars_instance.disable_dragging()
+			GameManager.add_score(2)
+
 			
 			

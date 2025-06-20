@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://qlopqfxkyvtt"]
+
+[ext_resource type="Texture2D" uid="uid://c8agx55ry0uox" path="res://img/component_img/red_cross/red_cross.png" id="1_jj2v1"]
+
+[node name="red_cross_sprite" type="Sprite2D"]
+z_index = 1
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_jj2v1")

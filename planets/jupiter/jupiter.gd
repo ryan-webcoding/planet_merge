@@ -20,3 +20,4 @@ func _on_body_entered(body: Node) -> void:
 
 			self.queue_free()
 			body.queue_free()
+			GameManager.add_score(20)

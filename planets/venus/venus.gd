@@ -32,5 +32,5 @@ func _on_body_entered(body: Node) -> void:
 			
 			if earth_instance.has_method("disable_dragging"):
 				earth_instance.disable_dragging()
-			
+			GameManager.add_score(4)
 			

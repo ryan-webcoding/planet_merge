@@ -14,7 +14,7 @@ max_contacts_reported = 4
 script = ExtResource("1_1j4fw")
 metadata/_edit_group_ = true
 
-[node name="mercury_sprite" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_f47se")
 offset = Vector2(-1.5, -1.5)
