@@ -8,6 +8,9 @@ var has_been_launched = false
 
 func _ready() -> void:
 	gravity_scale = 0
+	collision_layer = 2
+	collision_mask = 0
+
 
 func _on_input_mouseclicking(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if has_been_launched:
@@ -15,7 +18,6 @@ func _on_input_mouseclicking(viewport: Node, event: InputEvent, shape_idx: int) 
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		is_dragging = true
 		drag_start_position = event.position
-	print("drag detected")
 
 func _input(event: InputEvent) -> void:
 	if has_been_launched:
@@ -24,18 +26,22 @@ func _input(event: InputEvent) -> void:
 		if is_dragging:
 			var drag_end_position = event.position
 			var drag_vector = drag_end_position - drag_start_position
-			apply_impulse(-drag_vector, Vector2.ZERO)
+			
+			var max_strength = 1000
+			var clamped_vector = 4*drag_vector.limit_length(max_strength)
+			apply_impulse(-clamped_vector, Vector2.ZERO)
 			emit_signal("launched")
 			is_dragging = false
 			has_been_launched = true
 			gravity_scale = 1
-			
-	print("launching")
+			collision_layer = 1
+			collision_mask = 1
 
 
 func disable_dragging():
 	is_dragging = false
 	has_been_launched = true
 	gravity_scale = 1
-	print(gravity_scale)
+	collision_layer = 1
+	collision_mask = 1
 	set_process_input(false)

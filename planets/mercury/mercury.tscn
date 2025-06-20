@@ -8,7 +8,7 @@ radius = 16.0
 
 [node name="mercury" type="RigidBody2D"]
 input_pickable = true
-mass = 2.0
+mass = 10.0
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_1j4fw")
@@ -19,7 +19,7 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_f47se")
 offset = Vector2(-1.5, -1.5)
 
-[node name="mercury_collision" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_lyk70")
 
 [connection signal="input_event" from="." to="." method="_on_input_mouseclicking"]

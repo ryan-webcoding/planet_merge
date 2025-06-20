@@ -8,7 +8,7 @@ radius = 57.0789
 
 [node name="uranus" type="RigidBody2D"]
 input_pickable = true
-mass = 2.0
+mass = 10.0
 contact_monitor = true
 max_contacts_reported = 4
 script = ExtResource("1_two67")
@@ -18,5 +18,5 @@ position = Vector2(-1.8, -1.8)
 scale = Vector2(1.4, 1.4)
 texture = ExtResource("1_cfysw")
 
-[node name="uranus_collision" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_two67")

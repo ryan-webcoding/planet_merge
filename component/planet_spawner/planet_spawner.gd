@@ -26,5 +26,5 @@ func spawn_new_planet():
 	current_planet = planet_instance
 
 func _on_planet_launched():
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.3).timeout
 	spawn_new_planet()

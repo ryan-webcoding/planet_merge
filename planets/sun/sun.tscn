@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c5ijaop44x4dd"]
+[gd_scene load_steps=5 format=3 uid="uid://c5ijaop44x4dd"]
 
 [ext_resource type="Texture2D" uid="uid://2idfmefer8ii" path="res://img/planets_pixel/sun.png" id="1_pjq8l"]
 
@@ -7,6 +7,9 @@ radius = 81.0555
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_67uk3"]
 radius = 1785.01
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jqd82"]
+radius = 254.031
 
 [node name="sun" type="StaticBody2D"]
 
@@ -18,9 +21,18 @@ offset = Vector2(-1.5, -1.5)
 [node name="sun_collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_pjq8l")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="weak_gravity" type="Area2D" parent="."]
 gravity_space_override = 3
 gravity_point = true
+gravity = 1000.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="weak_gravity_collision" type="CollisionShape2D" parent="weak_gravity"]
 shape = SubResource("CircleShape2D_67uk3")
+
+[node name="strong_gravity" type="Area2D" parent="."]
+gravity_space_override = 3
+gravity_point = true
+gravity = 9000.0
+
+[node name="strong_gravity_collision" type="CollisionShape2D" parent="strong_gravity"]
+shape = SubResource("CircleShape2D_jqd82")
