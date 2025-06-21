@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://buroe2pwngeeu"]
+
+[ext_resource type="Texture2D" uid="uid://cv8r0pnlpvky1" path="res://img/component_img/panel/separation_bar.png" id="1_nwkmg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rwrn8"]
+texture = ExtResource("1_nwkmg")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ac4ll"]
+load_path = "res://.godot/imported/panel.png-2170727d94dd3a23034d0f7f8596f23b.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mxb7d"]
+texture = SubResource("CompressedTexture2D_ac4ll")
+texture_margin_right = 14.5212
+region_rect = Rect2(18.5943, 20.6925, 58.4057, 35.7114)
+
+[resource]
+HSeparator/constants/separation = 4
+HSeparator/styles/separator = SubResource("StyleBoxTexture_rwrn8")
+Panel/styles/panel = SubResource("StyleBoxTexture_mxb7d")

@@ -1,6 +1,7 @@
 extends "res://planets/planet_base.gd"
 
 func _ready():
+	
 	super()  # run planet_base.gd _ready()
 	connect("body_entered", Callable(self, "_on_body_entered"))
 

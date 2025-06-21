@@ -1,6 +1,17 @@
 extends Node
 
+#total score
 var score: int = 0
+
+#below are for counting planet number
+var mercury_number: int = 0
+var mars_number: int = 0
+var venus_number: int = 0
+var earth_number: int = 0
+var neptune_number: int =0
+var uranus_number: int =0
+var saturn_number: int =0
+var jupiter_number: int =0
 
 func add_score(amount: int) -> void:
 	score += amount

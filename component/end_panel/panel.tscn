@@ -1,0 +1,225 @@
+[gd_scene load_steps=15 format=3 uid="uid://bhjak2y2crd3j"]
+
+[ext_resource type="Texture2D" uid="uid://ce3bla7jda60p" path="res://img/component_img/panel/panel.png" id="1_6c330"]
+[ext_resource type="FontFile" uid="uid://cclxpsefqax4e" path="res://font/Silkscreen-Regular.ttf" id="2_bt2w7"]
+[ext_resource type="Theme" uid="uid://buroe2pwngeeu" path="res://component/end_panel/panel_theme.tres" id="3_h767b"]
+[ext_resource type="Texture2D" uid="uid://cbg2cs4jfun1b" path="res://img/planets_pixel/mercury.png" id="3_tsen2"]
+[ext_resource type="Texture2D" uid="uid://dxfxec7xjeb7y" path="res://img/planets_pixel/mars.png" id="4_h767b"]
+[ext_resource type="Texture2D" uid="uid://cv8r0pnlpvky1" path="res://img/component_img/panel/separation_bar.png" id="4_w84e3"]
+[ext_resource type="Texture2D" uid="uid://cve3wy6o05aa0" path="res://img/planets_pixel/venus.png" id="5_w84e3"]
+[ext_resource type="Texture2D" uid="uid://bg6tn3n2gdmf" path="res://img/planets_pixel/earth.png" id="6_vfys3"]
+[ext_resource type="Texture2D" uid="uid://b707mccklhm8r" path="res://img/planets_pixel/neptune.png" id="7_ophmk"]
+[ext_resource type="Texture2D" uid="uid://bxllbkeh35lj6" path="res://img/planets_pixel/uranus.png" id="8_p44gm"]
+[ext_resource type="Texture2D" uid="uid://cslipthu087t5" path="res://img/planets_pixel/saturn.png" id="9_xcfqu"]
+[ext_resource type="Texture2D" uid="uid://jhkf6t5unf5j" path="res://img/planets_pixel/jupiter.png" id="10_lj1v1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uv45i"]
+texture = ExtResource("1_6c330")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 14.5212
+texture_margin_bottom = 14.0
+region_rect = Rect2(3, 5, 74, 71)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vfys3"]
+texture = ExtResource("4_w84e3")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
+region_rect = Rect2(0, 0, 63, 19)
+
+[node name="Panel" type="Panel"]
+z_index = 3
+offset_right = 1718.0
+offset_bottom = 932.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_uv45i")
+metadata/_edit_group_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.624277, 0.0445933, 0.231311, 1)
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 110
+text = "gameover"
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_h767b")
+theme_override_styles/separator = SubResource("StyleBoxTexture_vfys3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 97
+
+[node name="mercury_container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/mercury_container"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_tsen2")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/mercury_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 49
+text = "*10"
+
+[node name="mars_container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/mars_container"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_h767b")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/mars_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 49
+text = "*9"
+
+[node name="venus_container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/venus_container"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("5_w84e3")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/venus_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 49
+text = "*8"
+
+[node name="earth_container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/earth_container"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("6_vfys3")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer/VBoxContainer/earth_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 49
+text = "*7"
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 100
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 97
+
+[node name="neptune_container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2/neptune_container"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("7_ophmk")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2/neptune_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 49
+text = "*6"
+
+[node name="uranus_container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2/uranus_container"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("8_p44gm")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2/uranus_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 49
+text = "*5"
+
+[node name="saturn_container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2/saturn_container"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("9_xcfqu")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2/saturn_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 49
+text = "*4"
+
+[node name="jupiter_container" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2/jupiter_container"]
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("10_lj1v1")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer2/VBoxContainer2/jupiter_container"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 49
+text = "*3"
+
+[node name="MarginContainer3" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 130
+theme_override_constants/margin_top = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3"]
+layout_mode = 2
+theme_override_constants/separation = 97
+
+[node name="total_launching_time" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 39
+text = "total number of times planet launched:"
+
+[node name="total_score" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 39
+text = "total score: "
+
+[node name="global_rank" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bt2w7")
+theme_override_font_sizes/font_size = 39
+text = "you beat 99% of player globally this run"
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "play again"

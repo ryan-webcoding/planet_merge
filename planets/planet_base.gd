@@ -6,6 +6,7 @@ var is_dragging = false
 var drag_start_position := Vector2.ZERO
 var has_been_launched = false
 
+
 func _ready() -> void:
 	gravity_scale = 0
 	collision_layer = 2

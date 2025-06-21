@@ -38,7 +38,7 @@ func _pick_next_planet():
 func spawn_new_planet():
 	var planet_instance = next_planet_scene.instantiate()
 	planet_instance.position = position
-
+	
 	if planet_instance.has_signal("launched"):
 		planet_instance.connect("launched", Callable(self, "_on_planet_launched"))
 
