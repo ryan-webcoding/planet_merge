@@ -17,7 +17,7 @@ position = Vector2(480, 540)
 
 [node name="dashed_circle_detector" parent="." instance=ExtResource("3_h2yge")]
 position = Vector2(1440, 540)
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.72, 0.72)
 
 [node name="score" type="Label" parent="."]
 offset_left = 29.0
