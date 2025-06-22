@@ -12,6 +12,22 @@ var uranus_number: int = 0
 var saturn_number: int = 0
 var jupiter_number: int = 0
 
+func reset():
+	score = 0
+	num_launched_planet = 0
+
+	mercury_number = 0
+	mars_number = 0
+	venus_number = 0
+	earth_number = 0
+	neptune_number = 0
+	uranus_number = 0
+	saturn_number = 0
+	jupiter_number = 0
+
+	update_score_label()
+
+
 func add_score(amount: int) -> void:
 	score += amount
 	update_score_label()

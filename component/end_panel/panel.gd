@@ -19,7 +19,31 @@ func _ready():
 
 func _on_restart_button_pressed():
 	Engine.time_scale = 1
-	var current_scene = get_tree().get_current_scene()
-	var new_scene = load(current_scene.scene_file_path).instantiate()
-	get_tree().root.call_deferred("add_child", new_scene)
-	current_scene.queue_free()
+
+	var main = get_tree().current_scene
+
+	# Reset GameManager
+	GameManager.reset()
+
+	# Remove all dynamically spawned children
+	for child in main.get_children():
+		var keep_names = ["sun", "dashed_circle_detector", "score"]
+		if not keep_names.has(child.name):
+			child.queue_free()
+
+	# Remove and replace planet_spawner
+	var old_spawner = main.get_node_or_null("planet_spawner")
+	if old_spawner:
+		var position = old_spawner.position
+		old_spawner.free()  # <- Immediate deletion
+
+		var spawner_scene = preload("res://component/planet_spawner/planet_spawner.tscn")
+		var new_spawner = spawner_scene.instantiate()
+		new_spawner.name = "planet_spawner"
+		new_spawner.position = position
+		main.add_child(new_spawner)
+		print("Spawner added, name:", new_spawner.name)
+
+
+	# Close the panel
+	queue_free()

@@ -16,7 +16,7 @@ var timer = 0
 @onready var forecast_sprite: Sprite2D = $forecast_sprite
 @onready var forecast_label: Label = $forecast_label # Optional name display
 
-func _ready() -> void:
+func _ready():
 	randomize()
 	_pick_next_planet()
 	spawn_new_planet()
