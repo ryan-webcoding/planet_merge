@@ -37,7 +37,7 @@ func _process(delta):
 				print("rigidbody found %d second" % seconds_counter)
 				if seconds_counter == 1:
 					emit_signal("gameover")
-
+					
 					var red_cross = red_cross_scene.instantiate()
 					red_cross.global_position = detected_position
 					get_tree().current_scene.add_child(red_cross)

@@ -33,4 +33,5 @@ func _on_body_entered(body: Node) -> void:
 			if uranus_instance.has_method("disable_dragging"):
 				uranus_instance.disable_dragging()
 			GameManager.add_score(6)
+			GameManager.increment_planet_count("uranus")
 			

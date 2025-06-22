@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhjak2y2crd3j"]
+[gd_scene load_steps=16 format=3 uid="uid://bhjak2y2crd3j"]
 
 [ext_resource type="Texture2D" uid="uid://ce3bla7jda60p" path="res://img/component_img/panel/panel.png" id="1_6c330"]
 [ext_resource type="FontFile" uid="uid://cclxpsefqax4e" path="res://font/Silkscreen-Regular.ttf" id="2_bt2w7"]
+[ext_resource type="Script" uid="uid://d1av8fsmtn0c5" path="res://component/end_panel/panel.gd" id="2_h767b"]
 [ext_resource type="Theme" uid="uid://buroe2pwngeeu" path="res://component/end_panel/panel_theme.tres" id="3_h767b"]
 [ext_resource type="Texture2D" uid="uid://cbg2cs4jfun1b" path="res://img/planets_pixel/mercury.png" id="3_tsen2"]
 [ext_resource type="Texture2D" uid="uid://dxfxec7xjeb7y" path="res://img/planets_pixel/mars.png" id="4_h767b"]
@@ -33,7 +34,9 @@ region_rect = Rect2(0, 0, 63, 19)
 z_index = 3
 offset_right = 1718.0
 offset_bottom = 932.0
+size_flags_horizontal = 4
 theme_override_styles/panel = SubResource("StyleBoxTexture_uv45i")
+script = ExtResource("2_h767b")
 metadata/_edit_group_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
