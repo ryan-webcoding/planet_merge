@@ -1,13 +1,18 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7vrfhdxvh0mf"]
+[gd_scene load_steps=7 format=3 uid="uid://c7vrfhdxvh0mf"]
 
 [ext_resource type="Script" uid="uid://btldo5dkbcov5" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c5ijaop44x4dd" path="res://planets/sun/sun.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://yfxyphr4qr5q" path="res://component/planet_spawner/planet_spawner.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://crgqi05ea6bnh" path="res://component/dashed_circle_detector/dashed_circle_detector.tscn" id="3_h2yge"]
 [ext_resource type="FontFile" uid="uid://cclxpsefqax4e" path="res://font/Silkscreen-Regular.ttf" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dd0yf80sf0et7" path="res://component/planet_launcher/planet_launcher.tscn" id="6_7mycd"]
 
 [node name="main" type="Node"]
 script = ExtResource("1_lquwl")
+
+[node name="planet_launcher" parent="." instance=ExtResource("6_7mycd")]
+position = Vector2(480, 540)
+scale = Vector2(0.14, 0.14)
 
 [node name="sun" parent="." instance=ExtResource("2_0xm2m")]
 position = Vector2(1440, 540)
@@ -20,10 +25,10 @@ position = Vector2(1440, 540)
 scale = Vector2(0.72, 0.72)
 
 [node name="score" type="Label" parent="."]
-offset_left = 29.0
-offset_top = 108.0
-offset_right = 272.0
-offset_bottom = 139.0
+offset_left = 56.0
+offset_top = 110.0
+offset_right = 299.0
+offset_bottom = 141.0
 theme_override_fonts/font = ExtResource("4_1bvp3")
 theme_override_font_sizes/font_size = 24
 text = "current score: "

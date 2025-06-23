@@ -1,21 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://yfxyphr4qr5q"]
+[gd_scene load_steps=5 format=3 uid="uid://yfxyphr4qr5q"]
 
 [ext_resource type="Script" uid="uid://cgvtne3cv5a2q" path="res://component/planet_spawner/planet_spawner.gd" id="1_o7rx7"]
 [ext_resource type="FontFile" uid="uid://cclxpsefqax4e" path="res://font/Silkscreen-Regular.ttf" id="2_esows"]
 [ext_resource type="Texture2D" uid="uid://bg6tn3n2gdmf" path="res://img/planets_pixel/earth.png" id="2_ycnhf"]
+[ext_resource type="Texture2D" uid="uid://dbrrvd1lvfui7" path="res://img/component_img/target/target.png" id="4_15sgb"]
 
 [node name="planet_spawner" type="Marker2D"]
 script = ExtResource("1_o7rx7")
 
 [node name="forecast_label" type="Label" parent="."]
-offset_left = -452.0
+offset_left = -424.0
 offset_top = -488.0
-offset_right = -356.0
-offset_bottom = -465.0
+offset_right = -217.0
+offset_bottom = -457.0
 theme_override_fonts/font = ExtResource("2_esows")
 theme_override_font_sizes/font_size = 24
 text = "next planet: "
 
 [node name="forecast_sprite" type="Sprite2D" parent="."]
-position = Vector2(-55, -474)
+position = Vector2(-27, -474)
 texture = ExtResource("2_ycnhf")
+
+[node name="target" type="Sprite2D" parent="."]
+position = Vector2(-27, -474)
+scale = Vector2(11, 11)
+texture = ExtResource("4_15sgb")
