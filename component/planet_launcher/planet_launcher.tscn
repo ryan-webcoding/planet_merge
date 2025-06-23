@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://5thtbswjivsg" path="res://img/component_img/dashed_circle/dashed_circle.png" id="1_svimr"]
 [ext_resource type="Script" uid="uid://dowkcr86kqw84" path="res://component/planet_launcher/planet_launcher.gd" id="1_w1fw3"]
-[ext_resource type="Texture2D" uid="uid://daevqega33ntu" path="res://img/component_img/arrow/arrow.png" id="2_w1fw3"]
+[ext_resource type="Texture2D" uid="uid://8q0hrdsr17x5" path="res://img/component_img/arrow/arrow.png" id="2_w1fw3"]
 
 [sub_resource type="Animation" id="Animation_g8vi5"]
 resource_name = "idle"
@@ -79,6 +79,6 @@ libraries = {
 }
 
 [node name="arrow" type="Sprite2D" parent="."]
-position = Vector2(700, 0)
+position = Vector2(-700, 0)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_w1fw3")

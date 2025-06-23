@@ -1,11 +1,25 @@
 extends Node2D
 
+func _ready():
+	# Start with the dashed_circle's idle animation playing
+	$dashed_circle/AnimationPlayer.play("idle")
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+	# Hide the arrow initially
+	$arrow.visible = false
 
+func _on_drag_started():
+	# Stop and reset the idle animation when user starts dragging
+	$dashed_circle/AnimationPlayer.stop()
+	$dashed_circle/AnimationPlayer.seek(0, true)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	# Show the arrow
+	$arrow.visible = true
+
+func _on_dragging(direction: Vector2):
+	# Rotate the whole launcher (affects arrow direction)
+	rotation = direction.angle()
+
+func _on_planet_launched():
+	# Resume idle animation and hide arrow again after launch
+	$dashed_circle/AnimationPlayer.play("idle")
+	$arrow.visible = false
