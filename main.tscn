@@ -49,9 +49,4 @@ script = ExtResource("8_kek77")
 auth_manager = NodePath("../AuthManager")
 
 [node name="Panel" parent="." instance=ExtResource("10_4c57u")]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
 offset_top = -40.0
-offset_bottom = 0.0
-grow_vertical = 0

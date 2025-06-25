@@ -27,7 +27,7 @@ func _on_restart_button_pressed():
 
 	# Remove all dynamically spawned children
 	for child in main.get_children():
-		var keep_names = ["sun", "dashed_circle_detector", "score", "planet_launcher","PlayerNameEditor", "AuthManager", "Leaderboard"]
+		var keep_names = ["sun", "dashed_circle_detector", "score", "planet_launcher","PlayerNameEditor", "AuthManager", "Leaderboard", "Panel"]
 		if not keep_names.has(child.name):
 			child.queue_free()
 
