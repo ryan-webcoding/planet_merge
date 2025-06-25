@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7vrfhdxvh0mf"]
+[gd_scene load_steps=11 format=3 uid="uid://c7vrfhdxvh0mf"]
 
 [ext_resource type="Script" uid="uid://btldo5dkbcov5" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c5ijaop44x4dd" path="res://planets/sun/sun.tscn" id="2_0xm2m"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://cjlqcuw4fbj6k" path="res://backend_script/AuthManager.gd" id="7_5vw27"]
 [ext_resource type="PackedScene" uid="uid://dgnkftcsg3jf0" path="res://component/player_name_label/player_name_editor.tscn" id="7_kek77"]
 [ext_resource type="Script" uid="uid://de7i62lhv2kes" path="res://backend_script/Leaderboard.gd" id="8_kek77"]
+[ext_resource type="PackedScene" uid="uid://b6atpedb4f3ly" path="res://component/leaderboard_ui/leaderboard_ui.tscn" id="10_4c57u"]
 
 [node name="main" type="Node"]
 script = ExtResource("1_lquwl")
@@ -46,3 +47,11 @@ script = ExtResource("7_5vw27")
 [node name="Leaderboard" type="Node" parent="." node_paths=PackedStringArray("auth_manager")]
 script = ExtResource("8_kek77")
 auth_manager = NodePath("../AuthManager")
+
+[node name="Panel" parent="." instance=ExtResource("10_4c57u")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_bottom = 0.0
+grow_vertical = 0

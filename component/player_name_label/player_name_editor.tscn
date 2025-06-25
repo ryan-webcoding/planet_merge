@@ -12,6 +12,7 @@ grow_horizontal = 0
 script = ExtResource("1_ebsjr")
 
 [node name="NameInput" type="LineEdit" parent="."]
+layout_mode = 0
 offset_left = -413.0
 offset_top = 21.0
 offset_right = -213.0
@@ -19,6 +20,7 @@ offset_bottom = 52.0
 theme_override_fonts/font = ExtResource("2_vewl6")
 
 [node name="SaveButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = -173.0
 offset_top = 21.0
 offset_right = -93.0
@@ -27,6 +29,7 @@ theme_override_fonts/font = ExtResource("2_vewl6")
 text = "change"
 
 [node name="NameStatus" type="Label" parent="."]
+layout_mode = 0
 offset_left = -413.0
 offset_top = 61.0
 offset_right = -5.0
