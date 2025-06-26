@@ -4,14 +4,14 @@ var email := ""
 var password := ""
 var access_token := ""
 var base_url := "https://smfydzhwujaqricxrlqi.supabase.co"
-var anon_key := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNtZnlkemh3dWphcXJpY3hybHFpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA4MDkyOTQsImV4cCI6MjA2NjM4NTI5NH0.1uY6FqPtzYha-pzIQR0BmUEo--9MtjMAG28eIvOcDig"  # keep as-is
+var anon_key := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNtZnlkemh3dWphcXJpY3hybHFpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA4MDkyOTQsImV4cCI6MjA2NjM4NTI5NH0.1uY6FqPtzYha-pzIQR0BmUEo--9MtjMAG28eIvOcDig"
 
 signal auth_success
 signal name_changed
-signal auth_ready  # Add this at top
-
+signal auth_ready
 
 func _ready():
+	clear_creds()  # Remove this after first run if you want to retain accounts
 	login_or_signup()
 
 func login_or_signup():
@@ -21,7 +21,8 @@ func login_or_signup():
 		password = saved[1]
 		login()
 	else:
-		email = "anon_godot_%d@hotmail.com" % randi()
+		var random_suffix = generate_suffix(8)
+		email = "planetmerger_%s@game.local" % random_suffix
 		password = "pass_%d" % randi()
 		save_creds(email, password)
 		signup()
@@ -48,18 +49,18 @@ func _on_auth_response(result, response_code, headers, body, source):
 
 	if data.has("access_token"):
 		access_token = data["access_token"]
-		print("Auth success from %s" % source)
+		print("✅ Auth success from %s: %s" % [source, email])
 		auth_success.emit()
 		auth_ready.emit()
 	else:
-		print("Auth failed (%s): %s" % [source, json_string])
+		print("❌ Auth failed (%s): %s" % [source, json_string])
 
 		if source == "signup":
 			login()  # try login if signup failed
 		elif source == "login":
-			print("Both signup and login failed. Regenerating credentials.")
+			print("🔁 Both signup and login failed. Regenerating credentials.")
 			clear_creds()
-			login_or_signup()  # try again with new email/password
+			login_or_signup()
 
 func send_request(url: String, body: Dictionary, callback: Callable):
 	var http := HTTPRequest.new()
@@ -88,3 +89,10 @@ func clear_creds():
 	if FileAccess.file_exists("user://anon_user.txt"):
 		var dir := DirAccess.open("user://")
 		dir.remove("anon_user.txt")
+
+func generate_suffix(length: int) -> String:
+	var chars = "abcdefghijklmnopqrstuvwxyz0123456789"
+	var result = ""
+	for i in length:
+		result += chars[randi() % chars.length()]
+	return result
