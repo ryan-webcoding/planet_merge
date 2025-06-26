@@ -7,6 +7,9 @@ var base_url := "https://smfydzhwujaqricxrlqi.supabase.co"
 var anon_key := "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNtZnlkemh3dWphcXJpY3hybHFpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTA4MDkyOTQsImV4cCI6MjA2NjM4NTI5NH0.1uY6FqPtzYha-pzIQR0BmUEo--9MtjMAG28eIvOcDig"  # keep as-is
 
 signal auth_success
+signal name_changed
+signal auth_ready  # Add this at top
+
 
 func _ready():
 	login_or_signup()
@@ -47,6 +50,7 @@ func _on_auth_response(result, response_code, headers, body, source):
 		access_token = data["access_token"]
 		print("Auth success from %s" % source)
 		auth_success.emit()
+		auth_ready.emit()
 	else:
 		print("Auth failed (%s): %s" % [source, json_string])
 

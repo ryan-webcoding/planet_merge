@@ -1,15 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6atpedb4f3ly"]
+[gd_scene load_steps=6 format=3 uid="uid://b6atpedb4f3ly"]
 
 [ext_resource type="Script" uid="uid://c2nelaxad2h5s" path="res://component/leaderboard_ui/leaderboard_ui.gd" id="1_2c47y"]
 [ext_resource type="Theme" uid="uid://dv4gsrkxdjvk" path="res://component/leaderboard_ui/leaderboard_theme.tres" id="2_h4rqk"]
+[ext_resource type="Theme" uid="uid://buroe2pwngeeu" path="res://component/end_panel/panel_theme.tres" id="3_dqt0f"]
 
-[node name="Panel" type="Panel"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wrglp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqt0f"]
+
+[node name="Panel" type="Control"]
+layout_mode = 3
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 grow_vertical = 0
 theme = ExtResource("2_h4rqk")
 script = ExtResource("1_2c47y")
+
+[node name="leaderboard_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -730.0
+offset_right = 170.0
+offset_bottom = -90.0
+theme = ExtResource("2_h4rqk")
+
+[node name="MarginContainer" type="MarginContainer" parent="leaderboard_panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_h4rqk")
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="leaderboard_panel/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wrglp")
+
+[node name="EntriesContainer" type="VBoxContainer" parent="leaderboard_panel/MarginContainer/ScrollContainer"]
+layout_mode = 2
 
 [node name="sideButton" type="TextureButton" parent="."]
 z_index = 3
@@ -25,13 +59,29 @@ offset_bottom = -371.0
 wait_time = 10.0
 autostart = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
+[node name="userInfoContainer" type="Panel" parent="."]
 layout_mode = 0
 offset_left = 10.0
-offset_top = -700.0
+offset_top = -90.0
 offset_right = 170.0
-offset_bottom = -60.0
-theme = ExtResource("2_h4rqk")
+offset_bottom = -30.0
+theme = ExtResource("3_dqt0f")
 
-[node name="EntriesContainer" type="VBoxContainer" parent="ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="userInfoContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="userInfoContainer/MarginContainer"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_dqt0f")
+
+[node name="userInfo" type="Label" parent="userInfoContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 0

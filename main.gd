@@ -10,7 +10,7 @@ func _ready():
 func _on_gameover():
 	# Manual delay for 1.5s using OS time
 	var start_time = Time.get_ticks_msec()
-	while Time.get_ticks_msec() - start_time < 1400:
+	while Time.get_ticks_msec() - start_time < 1600:
 		await get_tree().process_frame
 
 	var panel = panel_scene.instantiate()

@@ -41,6 +41,7 @@ func _on_name_change_response(response: String):
 		"success":
 			_show_status("✅ Name updated!")
 			leaderboard.auth_manager.email = name_input.text
+			leaderboard.auth_manager.emit_signal("name_changed")
 		_:
 			_show_status("⚠️ Unknown response: %s" % response)
 

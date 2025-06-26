@@ -48,5 +48,6 @@ script = ExtResource("7_5vw27")
 script = ExtResource("8_kek77")
 auth_manager = NodePath("../AuthManager")
 
-[node name="Panel" parent="." instance=ExtResource("10_4c57u")]
+[node name="Panel" parent="." node_paths=PackedStringArray("auth_manager") instance=ExtResource("10_4c57u")]
 offset_top = -40.0
+auth_manager = NodePath("../AuthManager")

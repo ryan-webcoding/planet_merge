@@ -16,6 +16,13 @@ func _ready():
 	$MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer/total_score.text = "total score: %d" % GameManager.score
 	
 	$MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer/Button.connect("pressed", Callable(self, "_on_restart_button_pressed"))
+	var leaderboard = get_node_or_null("/root/main/Leaderboard")  # Adjust if needed
+	if leaderboard:
+		leaderboard.get_percentile_rank(GameManager.score, func(percentile: float):
+			var label = $MarginContainer/VBoxContainer/HBoxContainer/MarginContainer3/VBoxContainer/global_rank
+			label.text = "YOU BEAT %d%% OF PLAYER GLOBALLY THIS RUN" % int(percentile)
+		)
+
 
 func _on_restart_button_pressed():
 	Engine.time_scale = 1
