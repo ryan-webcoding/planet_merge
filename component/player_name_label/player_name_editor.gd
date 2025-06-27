@@ -30,6 +30,13 @@ func _on_save_pressed():
 	if new_name == "":
 		_show_status("Name cannot be empty")
 		return
+
+	for i in new_name.length():
+		var code := new_name.unicode_at(i)
+		if not ((code >= 65 and code <= 90) or (code >= 97 and code <= 122)):
+			_show_status("Only A-Z and a-z letters allowed, no spaces or symbols")
+			return
+	
 	leaderboard.change_player_name(new_name, _on_name_change_response)
 
 func _on_name_change_response(response: String):

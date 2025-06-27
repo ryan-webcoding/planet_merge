@@ -13,7 +13,11 @@ config_version=5
 config/name="planet_merge"
 run/main_scene="uid://c7vrfhdxvh0mf"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/use_filter=false
+boot_splash/image="uid://uimtut68b38x"
 config/icon="uid://bk028r0fqfukm"
+boot_splash/minimum_display_time=2000
 
 [autoload]
 
@@ -25,6 +29,7 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+window/handheld/orientation=4
 
 [dotnet]
 

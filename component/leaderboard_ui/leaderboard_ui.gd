@@ -46,10 +46,10 @@ func _on_side_button_pressed():
 	is_panel_open = !is_panel_open
 
 	if is_panel_open:
-		position.x += 170
+		position.x += 190
 		side_button.texture_normal = texture_open
 	else:
-		position.x -= 170
+		position.x -= 190
 		side_button.texture_normal = texture_close
 
 func fetch_leaderboard():
@@ -72,7 +72,8 @@ func _on_request_completed(result, response_code, headers, body):
 	if typeof(data) == TYPE_ARRAY:
 		for child in entries_container.get_children():
 			child.queue_free()
-		for entry in data:
+		for i in data.size():
+			var entry = data[i]
 			var label := Label.new()
 			var settings := LabelSettings.new()
 			settings.font = font
@@ -81,8 +82,9 @@ func _on_request_completed(result, response_code, headers, body):
 
 			var name = entry.get("gamer_name", "Unknown")
 			var score = int(entry.get("score", 0))
-			label.text = "%s %d" % [name, score]
+			label.text = "%d %s %d" % [i + 1, name, score]
 			entries_container.add_child(label)
+
 	else:
 		print("⚠️ Unexpected leaderboard format")
 

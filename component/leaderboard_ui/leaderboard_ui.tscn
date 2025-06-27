@@ -21,7 +21,7 @@ script = ExtResource("1_2c47y")
 layout_mode = 0
 offset_left = 10.0
 offset_top = -730.0
-offset_right = 170.0
+offset_right = 190.0
 offset_bottom = -90.0
 theme = ExtResource("2_h4rqk")
 
@@ -48,10 +48,11 @@ layout_mode = 2
 [node name="sideButton" type="TextureButton" parent="."]
 z_index = 3
 layout_mode = 2
-offset_left = 156.0
-offset_top = -421.0
-offset_right = 206.0
-offset_bottom = -371.0
+offset_left = 164.0
+offset_top = -449.0
+offset_right = 214.0
+offset_bottom = -399.0
+scale = Vector2(2.4, 2.4)
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
@@ -63,7 +64,7 @@ autostart = true
 layout_mode = 0
 offset_left = 10.0
 offset_top = -90.0
-offset_right = 170.0
+offset_right = 190.0
 offset_bottom = -30.0
 theme = ExtResource("3_dqt0f")
 
