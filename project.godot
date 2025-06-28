@@ -22,6 +22,7 @@ boot_splash/minimum_display_time=2000
 [autoload]
 
 GameManager="*res://game_manager.gd"
+SaveState="*res://SaveState.gd"
 
 [display]
 
@@ -34,6 +35,10 @@ window/handheld/orientation=4
 [dotnet]
 
 project/assembly_name="planet_merge"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/admob/plugin.cfg")
 
 [physics]
 
