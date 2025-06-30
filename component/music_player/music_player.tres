@@ -1,9 +1,7 @@
-[gd_resource type="Theme" load_steps=24 format=4 uid="uid://b38bchndl16gb"]
+[gd_resource type="Theme" load_steps=11 format=4 uid="uid://b38bchndl16gb"]
 
 [ext_resource type="Texture2D" uid="uid://30h2pjr0dbgv" path="res://img/component_img/music_player/music_board.png" id="1_2vp4q"]
 [ext_resource type="Texture2D" uid="uid://xwbnwjvu3wew" path="res://img/component_img/music_player/left_button.png" id="1_tjpwx"]
-[ext_resource type="Texture2D" uid="uid://56mi8bhu3d8e" path="res://img/component_img/music_player/music_player_slider/grabber.png" id="3_l0lsq"]
-[ext_resource type="Texture2D" uid="uid://iwtj5yx3ql71" path="res://img/component_img/music_player/music_player_slider/slider.png" id="4_y8wrl"]
 
 [sub_resource type="Image" id="Image_j2c1t"]
 data = {
@@ -842,65 +840,6 @@ region_rect = Rect2(49, 16, 14, 13)
 texture = ExtResource("1_tjpwx")
 region_rect = Rect2(49, 16, 14, 13)
 
-[sub_resource type="Image" id="Image_kay71"]
-data = {
-"data": PackedByteArray("////AP///wD///8A////AP///wD///8A/v7+AP7+/gD+/v4A/v7+AP39/QD9/f0A////AP///wD///8A////AP///wD///8A////AP///wD///8R////Y/7+/pz+/v62/v7+tv7+/pz9/f1j/f39Ef///wD///8A////AP///wD///8A////AP///wD///9B/v7+tv7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/rb///8/////AP///wD///8A////AP///wD///9B/v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v////z////8A////AP///wD+/v4R/v7+tv7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v61/v7+EP///wD///8A////Y/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v////2H///8A/v7+AP7+/pz+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6b/v7+AP7+/gD+/v62/v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+tv7+/gD+/v4A/v7+tv7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/rX+/v4A/v7+AP7+/pz+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6a/v7+AP39/QD9/f1j/v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6/////YP///wD9/f0A/f39Ef7+/rb+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+tP///w////8A////AP///wD///8//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+v/v7+z37+/sA+/v7AP///wD///8A////AP///z/+/v61/v7+v/7+/r/+/v6//v7+v/7+/r/+/v6//v7+tPv7+z37+/sA+/v7APv7+wD///8A////AP///wD///8A/v7+EP///2H+/v6b/v7+tv7+/rX+/v6a////YP7+/g/7+/sA+/v7APv7+wD7+/sA////AP///wD///8A////AP///wD///8A/v7+AP7+/gD+/v4A/v7+AP///wD///8A+/v7APv7+wD7+/sA+/v7AA=="),
-"format": "RGBA8",
-"height": 16,
-"mipmaps": false,
-"width": 16
-}
-
-[sub_resource type="ImageTexture" id="ImageTexture_dq2kk"]
-image = SubResource("Image_kay71")
-
-[sub_resource type="Image" id="Image_o8wx8"]
-data = {
-"data": PackedByteArray("////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8I////Mf///03///9Z////Wf///03///8w////CP///wD///8A////AP///wD///8A////AP///wD///8g////Wf///17///9e////Xv///17///9e////Xv///1n///8f////AP///wD///8A////AP///wD///8g////Xv///17///9e////Xv///17///9e////Xv///17///9e////Xv///x////8A////AP///wD///8I////Wf///17///9e////Xv///17///9e////Xv///17///9e////Xv///17///9Z////CP///wD///8A////Mf///17///9e////Xv///17///9e////Xv///17///9e////Xv///17///9e////Xv///zD///8A////AP///03///9e////Xv///17///9e////Xv///17///9e////Xv///17///9e////Xv///17///9M////AP///wD///9Z////Xv///17///9e////Xv///17///9e////Xv///17///9e////Xv///17///9e////Wf///wD///8A////Wf///17///9e////Xv///17///9e////Xv///17///9e////Xv///17///9e////Xv///1n///8A////AP///03///9e////Xv///17///9e////Xv///17///9e////Xv///17///9e////Xv///17///9M////AP///wD///8w////Xv///17///9e////Xv///17///9e////Xv///17///9e////Xv///17///9e////L////wD///8A////CP///1n///9e////Xv///17///9e////Xv///17///9e////Xv///17///9e////WP///wf///8A////AP///wD///8f////Xv///17///9e////Xv///17///9e////Xv///17///9e////Xv///x7///8A////AP///wD///8A////AP///x////9Z////Xv///17///9e////Xv///17///9e////WP///x7///8A////AP///wD///8A////AP///wD///8A////CP///zD///9M////Wf///1n///9M////L////wf///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8A////AA=="),
-"format": "RGBA8",
-"height": 16,
-"mipmaps": false,
-"width": 16
-}
-
-[sub_resource type="ImageTexture" id="ImageTexture_65w10"]
-image = SubResource("Image_o8wx8")
-
-[sub_resource type="Image" id="Image_e1b4s"]
-data = {
-"data": PackedByteArray("////AP///wD///8A////AP///wD+/v4A/v7+AP7+/gD+/v4A/v7+AP7+/gD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8X/v7+hf7+/tH+/v70/v7+9P7+/tH+/v6E////Fv///wD///8A////AP///wD///8A////AP///wD///9X/v7+9P7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/vP///9U////AP///wD///8A////AP///wD///9X/v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+/////1T///8A////AP///wD///8X/v7+9P7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7y////Ff///wD+/v4A/v7+hf7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/oL+/v4A/v7+AP7+/tH+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7P/v7+AP7+/gD+/v70/v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+8/7+/gD+/v4A/v7+9P7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/vL+/v4A/v7+AP7+/tH+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7O/v7+AP7+/gD+/v6E/v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+gf7+/gD///8A////Fv7+/vP+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+8f///xT///8A////AP///wD///9U/v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+/////1H///8A////AP///wD///8A////AP///1T+/v7y/v7+//7+/v/+/v7//v7+//7+/v/+/v7//v7+8f///1H///8A////AP///wD///8A////AP///wD///8A////Ff7+/oL+/v7P/v7+8/7+/vL+/v7O/v7+gf///xT///8A////AP///wD///8A////AP///wD///8A////AP///wD+/v4A/v7+AP7+/gD+/v4A/v7+AP7+/gD///8A////AP///wD///8A////AA=="),
-"format": "RGBA8",
-"height": 16,
-"mipmaps": false,
-"width": 16
-}
-
-[sub_resource type="ImageTexture" id="ImageTexture_gxxry"]
-image = SubResource("Image_e1b4s")
-
-[sub_resource type="Image" id="Image_l0lsq"]
-data = {
-"data": PackedByteArray("////AP///0D///9A////AP///wD///9A////QP///wD///8A////QP///0D///8A////AP///0D///9A////AP///wD///9A////QP///wD///8A////QP///0D///8A////AP///0D///9A////AP///wD///9A////QP///wD///8A////QP///0D///8A////AP///0D///9A////AP///wD///9A////QP///wD///8A////QP///0D///8A////AP///0D///9A////AP///wD///9A////QP///wD///8A////QP///0D///8A////AP///0D///9A////AA=="),
-"format": "RGBA8",
-"height": 16,
-"mipmaps": false,
-"width": 4
-}
-
-[sub_resource type="ImageTexture" id="ImageTexture_y8wrl"]
-image = SubResource("Image_l0lsq")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8wx8"]
-texture = ExtResource("3_l0lsq")
-region_rect = Rect2(0, 0, 26, 22)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_65w10"]
-texture = ExtResource("3_l0lsq")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e1b4s"]
-texture = ExtResource("4_y8wrl")
-region_rect = Rect2(4.66384, 0, 90.6028, 8)
-
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjpwx"]
 texture = ExtResource("1_2vp4q")
 texture_margin_left = 6.65344
@@ -934,13 +873,4 @@ Button/styles/focus = SubResource("StyleBoxTexture_l0lsq")
 Button/styles/hover = SubResource("StyleBoxTexture_y8wrl")
 Button/styles/normal = SubResource("StyleBoxTexture_kay71")
 Button/styles/pressed = SubResource("StyleBoxTexture_dq2kk")
-HSlider/constants/center_grabber = 0
-HSlider/constants/grabber_offset = 0
-HSlider/icons/grabber = SubResource("ImageTexture_dq2kk")
-HSlider/icons/grabber_disabled = SubResource("ImageTexture_65w10")
-HSlider/icons/grabber_highlight = SubResource("ImageTexture_gxxry")
-HSlider/icons/tick = SubResource("ImageTexture_y8wrl")
-HSlider/styles/grabber_area = SubResource("StyleBoxTexture_o8wx8")
-HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_65w10")
-HSlider/styles/slider = SubResource("StyleBoxTexture_e1b4s")
 Panel/styles/panel = SubResource("StyleBoxTexture_tjpwx")

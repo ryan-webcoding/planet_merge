@@ -19,6 +19,10 @@ boot_splash/image="uid://uimtut68b38x"
 config/icon="uid://bk028r0fqfukm"
 boot_splash/minimum_display_time=2000
 
+[audio]
+
+general/ios/mix_with_others=true
+
 [autoload]
 
 GameManager="*res://game_manager.gd"
