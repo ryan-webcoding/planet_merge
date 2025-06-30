@@ -1,0 +1,215 @@
+[gd_scene load_steps=39 format=3 uid="uid://c55ibbjexcldv"]
+
+[ext_resource type="Theme" uid="uid://b38bchndl16gb" path="res://component/music_player/music_player.tres" id="1_hesxa"]
+[ext_resource type="Texture2D" uid="uid://dwq7j2ntfv6d" path="res://img/component_img/music_player/right_button.png" id="2_hfev8"]
+[ext_resource type="Script" uid="uid://cn3r0pl5akfxa" path="res://component/music_player/music_panel.gd" id="2_wjrnj"]
+[ext_resource type="Texture2D" uid="uid://xwbnwjvu3wew" path="res://img/component_img/music_player/left_button.png" id="3_wjrnj"]
+[ext_resource type="Texture2D" uid="uid://cvms8rf71afpo" path="res://img/component_img/music_player/music_player_figure/Untitled_Artwork-1.png" id="5_q1ukw"]
+[ext_resource type="Texture2D" uid="uid://barao4avx04fc" path="res://img/component_img/music_player/music_player_figure/Untitled_Artwork-2.png" id="6_afqkm"]
+[ext_resource type="Texture2D" uid="uid://d2d3ayuwu46kf" path="res://img/component_img/music_player/music_player_figure/Untitled_Artwork-3.png" id="7_165e6"]
+[ext_resource type="Texture2D" uid="uid://cr2mdnmj5knc1" path="res://img/component_img/music_player/music_player_figure/Untitled_Artwork-4.png" id="8_7xiwr"]
+[ext_resource type="Texture2D" uid="uid://b8gheni6vq43w" path="res://img/component_img/music_player/music_player_figure/Untitled_Artwork-5.png" id="9_f1jjc"]
+[ext_resource type="Texture2D" uid="uid://7kx4riqwxd44" path="res://img/component_img/music_player/music_player_figure/Untitled_Artwork-6.png" id="10_mo3b8"]
+[ext_resource type="Texture2D" uid="uid://iwtj5yx3ql71" path="res://img/component_img/music_player/music_player_slider/slider.png" id="11_165e6"]
+[ext_resource type="Texture2D" uid="uid://56mi8bhu3d8e" path="res://img/component_img/music_player/music_player_slider/grabber.png" id="12_7xiwr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqjgf"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_de3st"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r1uaw"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5dv0u"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xagd5"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q1ukw"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_afqkm"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_165e6"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7xiwr"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f1jjc"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mo3b8"]
+texture = ExtResource("2_hfev8")
+region_rect = Rect2(16, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dy0nf"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eetef"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ksx5u"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lakyl"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7dj3x"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q7xj0"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0r2aq"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0yrkb"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qem5b"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o42rk"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2iws"]
+texture = ExtResource("3_wjrnj")
+region_rect = Rect2(49, 16, 14, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dy0nf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_q1ukw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_afqkm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_165e6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7xiwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_f1jjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_mo3b8")
+}],
+"loop": true,
+"name": &"twerk",
+"speed": 12.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cuau3"]
+texture = ExtResource("11_165e6")
+region_rect = Rect2(5.56778, 0, 88.7949, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5pi0p"]
+texture = ExtResource("12_7xiwr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iuc68"]
+texture = ExtResource("12_7xiwr")
+
+[node name="music_panel" type="Panel"]
+z_index = 2
+offset_right = 320.0
+offset_bottom = 90.0
+theme = ExtResource("1_hesxa")
+script = ExtResource("2_wjrnj")
+
+[node name="left_button" type="Button" parent="."]
+z_index = 3
+layout_mode = 0
+offset_left = 12.0
+offset_top = 21.0
+offset_right = 57.0
+offset_bottom = 66.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_lqjgf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_de3st")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_r1uaw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_5dv0u")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xagd5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_q1ukw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_afqkm")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_165e6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7xiwr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_f1jjc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_mo3b8")
+
+[node name="mid_button" type="TextureButton" parent="."]
+z_index = 3
+layout_mode = 0
+offset_left = 82.0
+offset_top = 19.0
+offset_right = 132.0
+offset_bottom = 69.0
+stretch_mode = 0
+
+[node name="right_button" type="Button" parent="."]
+z_index = 3
+layout_mode = 0
+offset_left = 155.0
+offset_top = 22.0
+offset_right = 200.0
+offset_bottom = 67.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_dy0nf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_eetef")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ksx5u")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_lakyl")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_7dj3x")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_q7xj0")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0r2aq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0yrkb")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qem5b")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_o42rk")
+theme_override_styles/normal = SubResource("StyleBoxTexture_q2iws")
+
+[node name="music_player" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(287, 36)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_dy0nf")
+animation = &"twerk"
+frame = 1
+frame_progress = 0.859522
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_top = 90.0
+offset_right = 320.0
+offset_bottom = 106.0
+theme = ExtResource("1_hesxa")
+theme_override_styles/slider = SubResource("StyleBoxTexture_cuau3")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_5pi0p")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxTexture_iuc68")
+max_value = 1.0
+step = 0.01
+value = 1.0

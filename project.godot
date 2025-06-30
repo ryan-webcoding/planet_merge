@@ -22,7 +22,6 @@ boot_splash/minimum_display_time=2000
 [autoload]
 
 GameManager="*res://game_manager.gd"
-SaveState="*res://SaveState.gd"
 
 [display]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c7vrfhdxvh0mf"]
+[gd_scene load_steps=13 format=3 uid="uid://c7vrfhdxvh0mf"]
 
 [ext_resource type="Script" uid="uid://btldo5dkbcov5" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://c5ijaop44x4dd" path="res://planets/sun/sun.tscn" id="2_0xm2m"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://de7i62lhv2kes" path="res://backend_script/Leaderboard.gd" id="8_kek77"]
 [ext_resource type="PackedScene" uid="uid://b6atpedb4f3ly" path="res://component/leaderboard_ui/leaderboard_ui.tscn" id="10_4c57u"]
 [ext_resource type="PackedScene" uid="uid://cvtj816agxhv8" path="res://component/banner/banner.tscn" id="11_efxa6"]
+[ext_resource type="PackedScene" uid="uid://c55ibbjexcldv" path="res://component/music_player/music_panel.tscn" id="12_dg77c"]
 
 [node name="main" type="Node"]
 script = ExtResource("1_lquwl")
@@ -54,3 +55,9 @@ offset_top = -40.0
 auth_manager = NodePath("../AuthManager")
 
 [node name="banner" parent="." instance=ExtResource("11_efxa6")]
+
+[node name="music_panel" parent="." instance=ExtResource("12_dg77c")]
+offset_left = 9.0
+offset_top = 183.0
+offset_right = 328.0
+offset_bottom = 273.0
